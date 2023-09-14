@@ -3,8 +3,8 @@
 <head>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Nova+Square&display=swap" rel="stylesheet">
-	
+	<link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Nova+Square&family=Rubik&display=swap" rel="stylesheet">
+
 	<meta charset="UTF-8">
 	<title>AC6 Build Randomizer</title>
 	<style>
@@ -17,23 +17,29 @@
 			border: 1px solid #AAA;
 			margin: 1em;
 			padding: 1em;
-			font-family: 'Nova Square', cursive;
-
+			font-family: 'Rubik', sans-serif;
 		}
 		.part-category {
 			color: #454545;
 			font-size: 0.8em;
-			font-family: 'Nova Square', cursive;
-
+			font-family: 'Rubik', sans-serif;
 		}
 		.part-name {
-			margin-left: 2em;
+			text-align: center;
 			font-size: 1.4em;
 			font-weight: bold;
-			margin-top: 0.5em;
-			font-family: 'Nova Square', cursive;
-
+			font-family: 'Rubik', sans-serif;
 		}
+
+		.weapon-category{
+			font-size: 1em;
+			font-weight: bold;
+			text-align: left;
+			text-transform: uppercase;
+			font-family: 'Rubik', sans-serif;
+		}
+
+
 		ol {
 			list-style: disc;
 
@@ -49,77 +55,108 @@
 		}
 		.options h2 {
 			margin-top: 0;
-			font-family: 'Nova Square', cursive;
-
+			font-family: 'Rubik', sans-serif;
 		}
 
 		.changelog h2 {
 			margin-top: 0;
-			font-family: 'Nova Square', cursive;
-		}
+			font-family: 'Rubik', sans-serif;		}
 
 		.build {
 			width: 100%;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			font-family: 'Nova Square', cursive;
-
+			font-family: 'Rubik', sans-serif;
 
 		}
+
+		button {
+			width: 10em;
+			height:3em;
+		  }
 		
 	</style>
 </head>
 <body>
 	<h1>Armored Core 6 Build Randomizer</h1>
-	<p>EN負荷や重量を考慮してランダムな機体を生成します。 ※1.02時点でのすべてのパーツが含まれています。</p>
+	<p>EN負荷や重量を考慮してランダムな機体を生成します。 ※1.02時点でのすべてのパーツが含まれています。<br></p>
 	<div class="build">
 		<div class="part">
-			<div class="part-category">HEAD</div>
-			<div class="part-name" id="head-name">...</div>
+			<input type="checkbox" id="head-checkbox">
+			<label for="head-checkbox">
+				<div class="part-category">HEAD</div>
+				<div class="part-name" id="head-name">...</div>
+			</label>
 		</div>
 		<div class="part">
+			<input type="checkbox" id="core-checkbox">
+			<label for="core-checkbox">
 			<div class="part-category">CORE</div>
 			<div class="part-name" id="core-name">...</div>
 		</div>
 		<div class="part">
+			<input type="checkbox" id="arms-checkbox">
+			<label for="arms-checkbox">
 			<div class="part-category">ARMS</div>
 			<div class="part-name" id="arms-name">...</div>
 		</div>
 		<div class="part">
+			<input type="checkbox" id="legs-checkbox">
+			<label for="legs-checkbox">
 			<div class="part-category">LEGS</div>
 			<div class="part-name" id="legs-name">...</div>
 		</div>
 		<div class="part">
+			<input type="checkbox" id="booster-checkbox">
+			<label for="booster-checkbox">
 			<div class="part-category">BOOSTER</div>
 			<div class="part-name" id="booster-name">...</div>
 		</div>
 		<div class="part">
+			<input type="checkbox" id="fcs-checkbox">
+			<label for="fcs-checkbox">
 			<div class="part-category">FCS</div>
 			<div class="part-name" id="fcs-name">...</div>
 		</div>
 		<div class="part">
+			<input type="checkbox" id="generator-checkbox">
+			<label for="generator-checkbox">
 			<div class="part-category">GENERATOR</div>
 			<div class="part-name" id="generator-name">...</div>
 		</div>
 		<div class="part">
+			<input type="checkbox" id="expansion-checkbox">
+			<label for="expansion-checkbox">
 			<div class="part-category">EXPANSION</div>
 			<div class="part-name" id="expansion-name">...</div>
 		</div>
 		<div class="part">
-			<div class="part-category">Left Arm Units</div>
-			<div class="part-name" id="left_arm_unit-name">...</div>
-		</div>
-		<div class="part">
-			<div class="part-category">Right Arm Units</div>
+			<input type="checkbox" id="right_arm_unit-checkbox">
+			<label for="right_arm_unit-checkbox">
+			<div class="part-category">RIGHT ARM UNITS</div>
+			<div class="weapon-category" id="right_arm_unit-category">...</div>
 			<div class="part-name" id="right_arm_unit-name">...</div>
 		</div>
 		<div class="part">
-			<div class="part-category">Left Back Units</div>
-			<div class="part-name" id="left_back_unit-name">...</div>
+			<input type="checkbox" id="left_arm_unit-checkbox">
+			<label for="left_arm_unit-checkbox">
+			<div class="part-category">LEFT ARM UNITS</div>
+			<div class="weapon-category" id="left_arm_unit-category">...</div>
+			<div class="part-name" id="left_arm_unit-name">...</div>
 		</div>
 		<div class="part">
-			<div class="part-category">Right Back Units</div>
+			<input type="checkbox" id="right_back_unit-checkbox">
+			<label for="right_back_unit-checkbox">
+			<div class="part-category">RIGHT BACK UNITS</div>
+			<div class="weapon-category" id="right_back_unit-category">...</div>
 			<div class="part-name" id="right_back_unit-name">...</div>
+		</div>
+		<div class="part">
+			<input type="checkbox" id="left_back_unit-checkbox">
+			<label for="left_back_unit-checkbox">
+			<div class="part-category">LEFT BACK UNITS</div>
+			<div class="weapon-category" id="left_back_unit-category">...</div>
+			<div class="part-name" id="left_back_unit-name">...</div>
 		</div>
 	</div>
 	<ul>
@@ -127,8 +164,11 @@
 		<li><b>EN容量:</b> <span id="energy-info">...</span></li>
 		<li><b>COAM:</b> <span id="price-info">...</span></li>
 	</ul>
-	<button id="reroll">Generate</button>
-	<br /><br />
+	<button id="fullbuild">Generate</button>
+	<button id="reroll">Reroll</button>
+	<li>Generateボタンで生成できます。</li>
+	<li>Rerollボタンはチェックした項目を振り直します。</li>
+	</p>
 	<div class="options">
 		<h2>Options</h2>
 		<div>
