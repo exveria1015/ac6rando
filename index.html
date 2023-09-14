@@ -4,15 +4,13 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Kosugi&family=Nova+Square&display=swap" rel="stylesheet">
-
-
+	
 	<meta charset="UTF-8">
 	<title>AC6 Build Randomizer</title>
 	<style>
 		body {
 			max-width: 960px;
 			margin: 0 auto;
-			font-family: 'Nova Square', cursive;
 
 		}
 		.part {
@@ -38,7 +36,9 @@
 		}
 		ol {
 			list-style: disc;
+
 		}
+
 		.options {
 			border: 1px solid #AAA;
 			background-color: #EEE;
@@ -52,6 +52,12 @@
 			font-family: 'Nova Square', cursive;
 
 		}
+
+		.changelog h2 {
+			margin-top: 0;
+			font-family: 'Nova Square', cursive;
+		}
+
 		.build {
 			width: 100%;
 			display: grid;
@@ -131,13 +137,18 @@
 			<input type="checkbox" id="toggle-overweight" autocomplete="off" /> <label for="toggle-overweight">積載容量を無視</label> 
 		</div>
 	</div>
-	<h2>Changelog</h2>
-	<ol>
-		<li>2023/09/14 -- 日本語化/各武装をランダムで出力する機能を追加/レイアウトの調整</li>
-		<li>2023/09/06 -- 積載容量を無視するオプションを追加</li>
-		<li>2023/09/05 -- タンクの場合にブースターを装備しないように変更/COAMに関するオプションを追加/レイアウトの調整</li>
-		<li>2023/09/03 -- 初期リリース</li>
-	</ol>
+
+	<div class="changelog">
+		<h2>Changelog</h2>
+		<div>
+		<ol>
+			<li>2023/09/14 -- 日本語化/各武装をランダムで出力する機能を追加/レイアウトの調整</li>
+			<li>2023/09/06 -- 積載容量を無視するオプションを追加</li>
+			<li>2023/09/05 -- タンクの場合にブースターを装備しないように変更/COAMに関するオプションを追加/レイアウトの調整</li>
+			<li>2023/09/03 -- 初期リリース</li>
+		</ol>
+	</div>
+
 	<footer>
 		<a href="https://cohost.org/danbo" />danbo</a> did this. <a href="https://github.com/tinydanbo/ac6rando">Original GitHub source</a><br />
 		
