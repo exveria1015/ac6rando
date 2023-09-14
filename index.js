@@ -16,23 +16,30 @@ let should_randomize_weapons = false;
 let use_price_limit = false;
 
 function generateRandomBuild() {
-	let new_build = {
-		head: parts_data.heads.random(),
-		core: parts_data.cores.random(),
-		arms: parts_data.arms.random(),
-		legs: parts_data.legs.random(),
-		fcs: parts_data.fcs.random(),
-		generator: parts_data.generators.random(),
-		expansion: parts_data.expansions.random(),
-	};
-	if (! new_build.legs.is_tank) {
-		new_build.booster = parts_data.boosters.random();
-	}
-	if (should_randomize_weapons) {
+    let new_build = {
+        head: parts_data.heads.random(),
+        core: parts_data.cores.random(),
+        arms: parts_data.arms.random(),
+        legs: parts_data.legs.random(),
+        fcs: parts_data.fcs.random(),
+        generator: parts_data.generators.random(),
+        expansion: parts_data.expansions.random()
+    };
+    
+    if (should_randomize_weapons) {
+        new_build.right_arm_unit = parts_data.right_arm_units.random();
+        new_build.left_arm_unit = parts_data.left_arm_units.random();
+        new_build.right_back_unit = parts_data.right_back_units.random();
+        new_build.left_back_unit = parts_data.left_back_units.random();
+    }
+    
+    if (!new_build.legs.is_tank) {
+        new_build.booster = parts_data.boosters.random();
+    }
 
-	}
-	return new_build
+    return new_build;
 }
+
 
 function isBuildValid(build) {
 	let weight = 0;
@@ -96,6 +103,10 @@ ready(function() {
 		}
 	});
 
+	document.querySelector("#toggle-randomize_weapon").addEventListener("click", function() {
+		should_randomize_weapons = document.querySelector("#toggle-randomize_weapon").checked;
+	});
+
 	document.querySelector("#toggle-overweight").addEventListener("click", function() {
 		should_allow_overweight = document.querySelector("#toggle-overweight").checked;
 	});
@@ -124,6 +135,28 @@ ready(function() {
 		document.querySelector("#fcs-name").innerHTML = build.fcs.name;
 		document.querySelector("#generator-name").innerHTML = build.generator.name;
 		document.querySelector("#expansion-name").innerHTML = build.expansion.name;
+
+		if (build.right_arm_unit) {
+			document.querySelector("#right_arm_unit-name").innerHTML = build.right_arm_unit.name;
+		} else {
+			document.querySelector("#right_arm_unit-name").innerHTML = "(N/A)";
+		}
+		if (build.left_arm_unit) {
+			document.querySelector("#left_arm_unit-name").innerHTML = build.left_arm_unit.name;
+		} else {
+			document.querySelector("#left_arm_unit-name").innerHTML = "(N/A)";
+		}
+		if (build.right_back_unit) {
+			document.querySelector("#right_back_unit-name").innerHTML = build.right_back_unit.name;
+		} else {
+			document.querySelector("#right_back_unit-name").innerHTML = "(N/A)";
+		}
+		if (build.left_back_unit) {
+			document.querySelector("#left_back_unit-name").innerHTML = build.left_back_unit.name;
+		} else {
+			document.querySelector("#left_back_unit-name").innerHTML = "(N/A)";
+		}
+		
 		let weight_pct = (total_weight / load_limit) * 100;
 		weight_pct = Math.round(weight_pct * 100) / 100;
 		let energy_pct = (total_en_load / en_limit) * 100;
