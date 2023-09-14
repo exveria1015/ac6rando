@@ -783,7 +783,7 @@
 	"right_arm_units":
 	[
 		{
-			"name": "(NOTHING)",
+			"name": "(NOT EQUIPPED)",
 			"category": "n/a",
 			"weight": 0,
 			"en_load": 0,
@@ -1107,6 +1107,15 @@
 	],
 	"left_arm_units":
 	[
+	
+		{
+			"name": "(NOT EQUIPPED)",
+			"category": "n/a",
+			"weight": 0,
+			"en_load": 0,
+			"price": 0
+		},
+		
 		{
 			"name": "PB-033M ASHMEAD",
 			"category": "pile bunker",
@@ -1202,7 +1211,7 @@
 	"right_back_units":
 	[
 		{
-			"name": "(NOTHING)",
+			"name": "(NOT EQUIPPED)",
 			"category": "n/a",
 			"weight": 0,
 			"en_load": 0,
@@ -1478,6 +1487,13 @@
 	"left_back_units":
 	[
 		{
+			"name": "(NOT EQUIPPED)",
+			"category": "n/a",
+			"weight": 0,
+			"en_load": 0,
+			"price": 0
+		},
+		{
 			"name": "VP-61PS",
 			"category": "pulse shield",
 			"weight": 2700,
@@ -1529,7 +1545,7 @@
 	],
 	"expansions": [
 		{
-			"name": "(NONE)",
+			"name": "(NOT EQUIPPED)",
 			"weight": 0,
 			"en_load": 0,
 			"price": 0
