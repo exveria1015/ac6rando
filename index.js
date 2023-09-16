@@ -9,31 +9,70 @@ let total_en_load = 0;
 let en_limit = 0;
 let total_price = 0;
 
+
 let price_limit = 1000000;
 
 let should_allow_overweight = false;
-let should_randomize_weapons = false;
 let use_price_limit = false;
+let should_randomize_weapons = true;
+let exclude_notequiped = true;
+let include_arm_weapons = true;
+
 
 
 function generateFullRandomBuild() {
-    let new_build = {
+    const filterNotEquipped = partList => partList.filter(part => !part.name.includes("(NOT EQUIPPED)"));
+
+    const filtered_right_arm_units = filterNotEquipped(parts_data.right_arm_units);
+    const filtered_left_arm_units = filterNotEquipped(parts_data.left_arm_units);
+    const filtered_right_back_units = filterNotEquipped(parts_data.right_back_units);
+    const filtered_left_back_units = filterNotEquipped(parts_data.left_back_units);
+    const filtered_expansions = filterNotEquipped(parts_data.expansions);
+
+    const right_weapons = parts_data.right_arm_units.concat(parts_data.right_back_units);
+    const left_weapons = parts_data.left_arm_units.concat(parts_data.left_back_units);
+    const filtered_right_weapons = filtered_right_arm_units.concat(filtered_right_back_units);
+    const filtered_left_weapons = filtered_left_arm_units.concat(filtered_left_back_units);
+
+    const new_build = {
         head: parts_data.heads.random(),
         core: parts_data.cores.random(),
         arms: parts_data.arms.random(),
         legs: parts_data.legs.random(),
         fcs: parts_data.fcs.random(),
         generator: parts_data.generators.random(),
-        expansion: parts_data.expansions.random()
     };
-    
-    if (should_randomize_weapons) {
-        new_build.right_arm_unit = parts_data.right_arm_units.random();
-        new_build.left_arm_unit = parts_data.left_arm_units.random();
-        new_build.right_back_unit = parts_data.right_back_units.random();
-        new_build.left_back_unit = parts_data.left_back_units.random();
+
+    if (exclude_notequiped) {
+        new_build.expansion = filtered_expansions.random();
+    } else {
+        new_build.expansion = parts_data.expansions.random();
     }
-    
+
+    if (should_randomize_weapons) {
+        if (exclude_notequiped) {
+            new_build.right_arm_unit = filtered_right_arm_units.random();
+            new_build.left_arm_unit = filtered_left_arm_units.random();
+            if (include_arm_weapons) {
+                new_build.right_back_unit = filtered_right_weapons.random();
+                new_build.left_back_unit = filtered_left_weapons.random();
+            } else {
+                new_build.right_back_unit = filtered_right_back_units.random();
+                new_build.left_back_unit = filtered_left_back_units.random();
+            }
+        } else {
+            new_build.right_arm_unit = parts_data.right_arm_units.random();
+            new_build.left_arm_unit = parts_data.left_arm_units.random();
+            if (include_arm_weapons) {
+                new_build.right_back_unit = right_weapons.random();
+                new_build.left_back_unit = left_weapons.random();
+            } else {
+                new_build.right_back_unit = parts_data.right_back_units.random();
+                new_build.left_back_unit = parts_data.left_back_units.random();
+            }
+        }
+    }
+
     if (!new_build.legs.is_tank) {
         new_build.booster = parts_data.boosters.random();
     }
@@ -41,55 +80,116 @@ function generateFullRandomBuild() {
     return new_build;
 }
 
+
 function generateRandomBuild(currentBuild) {
-	let new_build = { ...currentBuild }; // 現在のビルドをコピー
-	if (document.querySelector("#head-checkbox").checked) {
-        new_build.head = parts_data.heads.random();
-		
-    }
-	if (document.querySelector("#core-checkbox").checked) {
-        new_build.core = parts_data.cores.random();
-    }
-	if (document.querySelector("#arms-checkbox").checked) {
-        new_build.arms = parts_data.arms.random();
-    }
-	if (document.querySelector("#legs-checkbox").checked) {
-        new_build.legs = parts_data.legs.random();
-    }
 
-	if (document.querySelector("#fcs-checkbox").checked) {
-        new_build.fcs = parts_data.fcs.random();
-    }
-    
-	if (document.querySelector("#generator-checkbox").checked) {
-        new_build.generator = parts_data.generators.random();
-    }
+	const filterNotEquipped = partList => partList.filter(part => !part.name.includes("(NOT EQUIPPED)"));
 
-	if (document.querySelector("#expansion-checkbox").checked) {
-        new_build.expansion = parts_data.expansions.random();
-    }
-    
-    if (should_randomize_weapons) {
-		if (document.querySelector("#right_arm_unit-checkbox").checked) {
-            new_build.right_arm_unit = parts_data.right_arm_units.random();
+    const filtered_right_arm_units = filterNotEquipped(parts_data.right_arm_units);
+    const filtered_left_arm_units = filterNotEquipped(parts_data.left_arm_units);
+    const filtered_right_back_units = filterNotEquipped(parts_data.right_back_units);
+    const filtered_left_back_units = filterNotEquipped(parts_data.left_back_units);
+    const filtered_expansions = filterNotEquipped(parts_data.expansions);
+
+    const right_weapons = parts_data.right_arm_units.concat(parts_data.right_back_units);
+    const left_weapons = parts_data.left_arm_units.concat(parts_data.left_back_units);
+    const filtered_right_weapons = filtered_right_arm_units.concat(filtered_right_back_units);
+    const filtered_left_weapons = filtered_left_arm_units.concat(filtered_left_back_units);
+
+    const new_build = { ...currentBuild };
+
+    const checkboxIds = [
+        "head-checkbox", "core-checkbox", "arms-checkbox",
+        "legs-checkbox", "fcs-checkbox", "generator-checkbox",
+        "right_arm_unit-checkbox", "left_arm_unit-checkbox",
+        "right_back_unit-checkbox", "left_back_unit-checkbox",
+        "booster-checkbox"
+    ];
+
+    checkboxIds.forEach(checkboxId => {
+        const checkbox = document.querySelector(`#${checkboxId}`);
+        if (checkbox && checkbox.checked) {
+            switch (checkboxId) {
+                case "head-checkbox":
+                    new_build.head = parts_data.heads.random();
+                    break;
+                case "core-checkbox":
+                    new_build.core = parts_data.cores.random();
+                    break;
+                case "arms-checkbox":
+                    new_build.arms = parts_data.arms.random();
+                    break;
+                case "legs-checkbox":
+                    new_build.legs = parts_data.legs.random();
+                    break;
+                case "fcs-checkbox":
+                    new_build.fcs = parts_data.fcs.random();
+                    break;
+                case "generator-checkbox":
+                    new_build.generator = parts_data.generators.random();
+                    break;
+                case "right_arm_unit-checkbox":
+                    if (exclude_notequiped) {
+                            new_build.right_arm_unit = filtered_right_arm_units.random();
+                        }
+
+                    else {
+                            new_build.right_arm_unit = parts_data.right_arm_units.random();
+                        }
+                    break;
+                case "left_arm_unit-checkbox":
+                    if (exclude_notequiped) {
+                            new_build.left_arm_unit = filtered_left_arm_units.random();
+						}
+                    else {
+
+                            new_build.left_arm_unit = parts_data.left_arm_units.random();
+                        }
+                    break;
+					
+                case "right_back_unit-checkbox":
+                    if (exclude_notequiped) {
+                        if (include_arm_weapons) {
+                            new_build.right_back_unit = filtered_right_weapons.random();
+                        } else {
+                            new_build.right_back_unit = filtered_right_back_units.random();
+                        }
+                    } else {
+                        new_build.right_back_unit = include_arm_weapons ? right_weapons.random() : parts_data.right_back_units.random();
+                    }
+                    break;
+                case "left_back_unit-checkbox":
+                    if (exclude_notequiped) {
+                        if (include_arm_weapons) {
+                            new_build.left_back_unit = filtered_left_weapons.random();
+                        } else {
+                            new_build.left_back_unit = filtered_left_back_units.random();
+                        }
+                    } else {
+                        new_build.left_back_unit = include_arm_weapons ? left_weapons.random() : parts_data.left_back_units.random();
+                    }
+                    break;
+                case "booster-checkbox":
+                    if (!new_build.legs.is_tank) {
+                        new_build.booster = parts_data.boosters.random();
+                    }
+                    break;
+            }
         }
-		if (document.querySelector("#left_arm_unit-checkbox").checked) {
-            new_build.left_arm_unit = parts_data.left_arm_units.random();
+    });
+
+    if (document.querySelector("#expansion-checkbox").checked) {
+        if (exclude_notequiped) {
+            new_build.expansion = filtered_expansions.random();
+        } else {
+            new_build.expansion = parts_data.expansions.random();
         }
-		if (document.querySelector("#right_back_unit-checkbox").checked) {
-            new_build.right_back_unit = parts_data.right_back_units.random();
-        }
-		if (document.querySelector("#left_back_unit-checkbox").checked) {
-            new_build.left_back_unit = parts_data.left_back_units.random();
-        }
-    }
-    
-    if (new_build.legs && !new_build.legs.is_tank && document.querySelector("#booster-checkbox").checked) {
-        new_build.booster = parts_data.boosters.random();
     }
 
     return new_build;
 }
+
+
 
 
 function isBuildValid(build) {
@@ -104,6 +204,7 @@ function isBuildValid(build) {
             weight += (k !== "legs") ? part.weight : 0;
             total_en += part.en_load ? part.en_load : 0;
             price += part.price;
+			
         }
     });
 
@@ -120,7 +221,7 @@ function isBuildValid(build) {
         return false;
     }
 
-    total_weight = weight;
+	total_weight = weight;
     load_limit = build.legs.load_limit;
     total_en_load = total_en;
     en_limit = adjusted_en_output;
@@ -158,6 +259,14 @@ ready(function() {
 
 	document.querySelector("#toggle-randomize_weapon").addEventListener("click", function() {
 		should_randomize_weapons = document.querySelector("#toggle-randomize_weapon").checked;
+	});
+
+	document.querySelector("#toggle-exclude_notequiped").addEventListener("click", function() {
+		exclude_notequiped = document.querySelector("#toggle-exclude_notequiped").checked;
+	});
+
+	document.querySelector("#toggle-include_arm_weapons").addEventListener("click", function() {
+		include_arm_weapons = document.querySelector("#toggle-include_arm_weapons").checked;
 	});
 
 	document.querySelector("#toggle-overweight").addEventListener("click", function() {
@@ -230,7 +339,7 @@ ready(function() {
 			arms: parts_data.arms.find(part => part.name === document.querySelector("#arms-name").innerHTML),
 			legs: parts_data.legs.find(part => part.name === document.querySelector("#legs-name").innerHTML),
 			fcs: parts_data.fcs.find(part => part.name === document.querySelector("#fcs-name").innerHTML),
-        	booster: parts_data.boosters.find(part => part.name === document.querySelector("#booster-name").innerHTML),
+        	//booster: parts_data.boosters.find(part => part.name === document.querySelector("#booster-name").innerHTML),
 			generator: parts_data.generators.find(part => part.name === document.querySelector("#generator-name").innerHTML),
         	expansion: parts_data.expansions.find(part => part.name === document.querySelector("#expansion-name").innerHTML),
 			right_arm_unit: parts_data.right_arm_units.find(part => part.name === document.querySelector("#right_arm_unit-name").innerHTML),
@@ -239,6 +348,10 @@ ready(function() {
 			left_back_unit:parts_data.left_back_units.find(part => part.name === document.querySelector("#left_back_unit-name").innerHTML),
 			};
 
+			if (!currentBuild.legs.is_tank) {
+				currentBuild.booster = parts_data.boosters.find(part => part.name === document.querySelector("#booster-name").innerHTML);
+			}
+			
 			let build = generateRandomBuild(currentBuild);
 			while (!isBuildValid(build)) {
 				build = generateRandomBuild(currentBuild);
