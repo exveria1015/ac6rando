@@ -1107,7 +1107,6 @@
 	],
 	"left_arm_units":
 	[
-	
 		{
 			"name": "(NOT EQUIPPED)",
 			"category": "n/a",
@@ -1206,6 +1205,321 @@
 			"weight": 2030,
 			"en_load": 642,
 			"price": 368000
+		},
+		{
+			"name": "MA-J-200 RANSETSU-RF",
+			"category": "burst rifle",
+			"weight": 4210,
+			"en_load": 158,
+			"price": 105000
+		},
+		{
+			"name": "LR-036 CURTIS",
+			"category": "linear rifle",
+			"weight": 4150,
+			"en_load": 289,
+			"price": 65000
+		},
+		{
+			"name": "LR-037 HARRIS",
+			"category": "linear rifle",
+			"weight": 4840,
+			"en_load": 441,
+			"price": 135000
+		},
+		{
+			"name": "RF-024 TURNER",
+			"category": "assault rifle",
+			"weight": 3560,
+			"en_load": 102,
+			"price": 0
+		},
+		{
+			"name": "RF-025 SCUDDER",
+			"category": "assault rifle",
+			"weight": 3830,
+			"en_load": 153,
+			"price": 205000
+		},
+		{
+			"name": "MA-J-201 RANSETSU-AR",
+			"category": "burst assault rifle",
+			"weight": 3620,
+			"en_load": 132,
+			"price": 111000
+		},
+		{
+			"name": "MG-014 LUDLOW",
+			"category": "machine gun",
+			"weight": 2450,
+			"en_load": 82,
+			"price": 45000
+		},
+		{
+			"name": "DF-MG-02 CHANG-CHEN",
+			"category": "machine gun",
+			"weight": 3280,
+			"en_load": 143,
+			"price": 120000
+		},
+		{
+			"name": "MA-E-210 ETSUJIN",
+			"category": "burst machine gun",
+			"weight": 2810,
+			"en_load": 98,
+			"price": 74000
+		},
+		{
+			"name": "DF-GA-08 HU-BEN",
+			"category": "gatling gun",
+			"weight": 5800,
+			"en_load": 425,
+			"price": 170000
+		},
+		{
+			"name": "SG-026 HALDEMAN",
+			"category": "shotgun",
+			"weight": 3660,
+			"en_load": 185,
+			"price": 75000
+		},
+		{
+			"name": "SG-027 ZIMMERMAN",
+			"category": "shotgun",
+			"weight": 4400,
+			"en_load": 242,
+			"price": 115000
+		},
+		{
+			"name": "WR-0777 SWEET SIXTEEN",
+			"category": "shotgun",
+			"weight": 1640,
+			"en_load": 268,
+			"price": 49000
+		},
+		{
+			"name": "HG-003 COQUILLETT",
+			"category": "handgun",
+			"weight": 1200,
+			"en_load": 122,
+			"price": 35000
+		},
+		{
+			"name": "HG-004 DUCKETT",
+			"category": "handgun",
+			"weight": 1650,
+			"en_load": 158,
+			"price": 112000
+		},
+		{
+			"name": "MA-E-211 SAMPU",
+			"category": "burst handgun",
+			"weight": 960,
+			"en_load": 62,
+			"price": 73000
+		},
+		{
+			"name": "EL-PW-00 VIENTO",
+			"category": "needle gun",
+			"weight": 1180,
+			"en_load": 215,
+			"price": 148000
+		},
+		{
+			"name": "VP-66EG",
+			"category": "stun gun",
+			"weight": 980,
+			"en_load": 247,
+			"price": 129000
+		},
+		{
+			"name": "DF-BA-06 XUAN-GE",
+			"category": "bazooka",
+			"weight": 5480,
+			"en_load": 240,
+			"price": 70000
+		},
+		{
+			"name": "MAJESTIC",
+			"category": "bazooka",
+			"weight": 4660,
+			"en_load": 178,
+			"price": 121000
+		},
+		{
+			"name": "LITTLE GEM",
+			"category": "bazooka",
+			"weight": 3100,
+			"en_load": 192,
+			"price": 163000
+		},
+		{
+			"name": "44-141 JVLN ALPHA",
+			"category": "detonating bazooka",
+			"weight": 7420,
+			"en_load": 299,
+			"price": 210000
+		},
+		{
+			"name": "DF-GR-07 GOU-CHEN",
+			"category": "grenade launcher",
+			"weight": 5460,
+			"en_load": 385,
+			"price": 140000
+		},
+		{
+			"name": "DIZZY",
+			"category": "grenade launcher",
+			"weight": 6420,
+			"en_load": 455,
+			"price": 260000
+		},
+		{
+			"name": "IRIDIUM",
+			"category": "grenade launcher",
+			"weight": 2020,
+			"en_load": 290,
+			"price": 214000
+		},
+		{
+			"name": "MA-T-222 KYORAI",
+			"category": "napalm bomb launcher",
+			"weight": 2890,
+			"en_load": 60,
+			"price": 91000
+		},
+		{
+			"name": "MA-T-223 KYORIKU",
+			"category": "jamming bomb launcher",
+			"weight": 2600,
+			"en_load": 52,
+			"price": 103000
+		},
+		{
+			"name": "WS-1200 THERAPIST",
+			"category": "stun bomb launcher",
+			"weight": 3180,
+			"en_load": 82,
+			"price": 138000
+		},
+		{
+			"name": "WB-0000 BAD COOK",
+			"category": "flamethrower",
+			"weight": 6210,
+			"en_load": 403,
+			"price": 49000
+		},
+		{
+			"name": "VP-66LR",
+			"category": "laser rifle",
+			"weight": 3560,
+			"en_load": 480,
+			"price": 98000
+		},
+		{
+			"name": "VE-66LRA",
+			"category": "laser rifle",
+			"weight": 4940,
+			"en_load": 532,
+			"price": 180000
+		},
+		{
+			"name": "VE-66LRB",
+			"category": "laser rifle",
+			"weight": 7760,
+			"en_load": 604,
+			"price": 235000
+		},
+		{
+			"name": "WUERGER/66E",
+			"category": "laser shotgun",
+			"weight": 2880,
+			"en_load": 440,
+			"price": 147000
+		},
+		{
+			"name": "VP-66LS",
+			"category": "laser shotgun",
+			"weight": 3540,
+			"en_load": 510,
+			"price": 105000
+		},
+		{
+			"name": "VP-66LH",
+			"category": "laser handgun",
+			"weight": 2800,
+			"en_load": 395,
+			"price": 92000
+		},
+		{
+			"name": "Vvc-760PR",
+			"category": "plasma rifle",
+			"weight": 3330,
+			"en_load": 490,
+			"price": 202000
+		},
+		{
+			"name": "IA-C01W1 NEBULA",
+			"category": "plasma rifle",
+			"weight": 3890,
+			"en_load": 609,
+			"price": 185000
+		},
+		{
+			"name": "IA-C01W6 NB-REDSHIFT",
+			"category": "coral rifle",
+			"weight": 4040,
+			"en_load": 667,
+			"price": 312000
+		},
+		{
+			"name": "IB-C03W1 WLT 011",
+			"category": "coral rifle",
+			"weight": 9030,
+			"en_load": 850,
+			"price": 335000
+		},
+		{
+			"name": "44-142 KRSV",
+			"category": "multi energy rifle",
+			"weight": 10120,
+			"en_load": 707,
+			"price": 377000
+		},
+		{
+			"name": "HI-16: GU-Q1",
+			"category": "pulse gun",
+			"weight": 2110,
+			"en_load": 368,
+			"price": 90000
+		},
+		{
+			"name": "HI-18: GU-A2",
+			"category": "pulse gun",
+			"weight": 2650,
+			"en_load": 446,
+			"price": 159000
+		},
+		{
+			"name": "HML-G2/P19MLT-04",
+			"category": "missile launcher",
+			"weight": 3250,
+			"en_load": 165,
+			"price": 80000
+		},
+		{
+			"name": "HML-G3/P08SPL-06",
+			"category": "split missile launcher",
+			"weight": 4630,
+			"en_load": 180,
+			"price": 127000
+		},
+		{
+			"name": "WS-5000 APERITIF",
+			"category": "siege missile launcher",
+			"weight": 4600,
+			"en_load": 165,
+			"price": 168000
 		}
 	],
 	"right_back_units":
@@ -1541,15 +1855,285 @@
 			"weight": 2170,
 			"en_load": 800,
 			"price": 255000
+		},
+		
+		{
+			"name": "SB-033M MORLEY",
+			"category": "spread bazooka",
+			"weight": 8480,
+			"en_load": 465,
+			"price": 255000
+		},
+		{
+			"name": "EARSHOT",
+			"category": "grenade cannon",
+			"weight": 7230,
+			"en_load": 386,
+			"price": 303000
+		},
+		{
+			"name": "SONGBIRDS",
+			"category": "grenade cannon",
+			"weight": 5500,
+			"en_load": 285,
+			"price": 182000
+		},
+		{
+			"name": "VE-60SNA",
+			"category": "stun needle launcher",
+			"weight": 6150,
+			"en_load": 825,
+			"price": 283000
+		},
+		{
+			"name": "VP-60LCS",
+			"category": "laser cannon",
+			"weight": 5190,
+			"en_load": 683,
+			"price": 147000
+		},
+		{
+			"name": "VE-60LCA",
+			"category": "laser cannon",
+			"weight": 14820,
+			"en_load": 1200,
+			"price": 333000
+		},
+		{
+			"name": "VP-60LCD",
+			"category": "diffuse laser cannon",
+			"weight": 7620,
+			"en_load": 784,
+			"price": 215000
+		},
+		{
+			"name": "FASAN/60E",
+			"category": "plasma cannon",
+			"weight": 6270,
+			"en_load": 882,
+			"price": 217000
+		},
+		{
+			"name": "KRANICH/60Z",
+			"category": "pulse cannon",
+			"weight": 2100,
+			"en_load": 652,
+			"price": 177000
+		},
+		{
+			"name": "EULE/60D",
+			"category": "pulse shield launcher",
+			"weight": 3060,
+			"en_load": 620,
+			"price": 243000
+		},
+		{
+			"name": "IA-C01W3: AURORA",
+			"category": "light wave cannon",
+			"weight": 3330,
+			"en_load": 522,
+			"price": 340000
+		},
+		{
+			"name": "BML-G1/P20MLT-04",
+			"category": "missile launcher",
+			"weight": 2120,
+			"en_load": 154,
+			"price": 0
+		},
+		{
+			"name": "BML-G2/P03MLT-06",
+			"category": "missile launcher",
+			"weight": 3840,
+			"en_load": 241,
+			"price": 111000
+		},
+		{
+			"name": "BML-G2/P05MLT-10",
+			"category": "missile launcher",
+			"weight": 5220,
+			"en_load": 320,
+			"price": 165000
+		},
+		{
+			"name": "BML-G2/P19SPL-12",
+			"category": "split missile launcher",
+			"weight": 3580,
+			"en_load": 325,
+			"price": 123000
+		},
+		{
+			"name": "BML-G2/P16SPL-08",
+			"category": "split missile launcher",
+			"weight": 2800,
+			"en_load": 228,
+			"price": 85000
+		},
+		{
+			"name": "BML-G2/P17SPL-16",
+			"category": "split missile launcher",
+			"weight": 5010,
+			"en_load": 510,
+			"price": 160000
+		},
+		{
+			"name": "BML-G1/P31DUO-02",
+			"category": "dual missile launcher",
+			"weight": 1900,
+			"en_load": 182,
+			"price": 144000
+		},
+		{
+			"name": "BML-G1/P32DUO-03",
+			"category": "dual missile launcher",
+			"weight": 3450,
+			"en_load": 262,
+			"price": 180000
+		},
+		{
+			"name": "BML-G2/P08DUO-03",
+			"category": "dual missile launcher",
+			"weight": 4020,
+			"en_load": 332,
+			"price": 228000
+		},
+		{
+			"name": "BML-G1/P01VTC-04",
+			"category": "vertical missile launcher",
+			"weight": 2240,
+			"en_load": 258,
+			"price": 85000
+		},
+		{
+			"name": "BML-G1/P03VTC-08",
+			"category": "vertical missile launcher",
+			"weight": 3920,
+			"en_load": 380,
+			"price": 112000
+		},
+		{
+			"name": "BML-G1/P07VTC-12",
+			"category": "vertical missile launcher",
+			"weight": 5010,
+			"en_load": 525,
+			"price": 188000
+		},
+		{
+			"name": "BML-G3/P04ACT-01",
+			"category": "active homing missile launcher",
+			"weight": 2680,
+			"en_load": 213,
+			"price": 98000
+		},
+		{
+			"name": "BML-G3/P05ACT-02",
+			"category": "active homing missile launcher",
+			"weight": 4320,
+			"en_load": 424,
+			"price": 145000
+		},
+		{
+			"name": "BML-G1/P29CNT",
+			"category": "container missile launcher",
+			"weight": 6370,
+			"en_load": 150,
+			"price": 250000
+		},
+		{
+			"name": "WR-0999 DELIVERY BOY",
+			"category": "cluster missile launcher",
+			"weight": 6890,
+			"en_load": 499,
+			"price": 298000
+		},
+		{
+			"name": "WS-5001 SOUP",
+			"category": "scatter missile launcher",
+			"weight": 5620,
+			"en_load": 680,
+			"price": 326000
+		},
+		{
+			"name": "45-091 JVLN BETA",
+			"category": "detonating missile launcher",
+			"weight": 4250,
+			"en_load": 425,
+			"price": 210000
+		},
+		{
+			"name": "EL-PW-01 TRUENO",
+			"category": "needle missile launcher",
+			"weight": 3100,
+			"en_load": 420,
+			"price": 271000
+		},
+		{
+			"name": "Vvc-703PM",
+			"category": "plasma missile launcher",
+			"weight": 2720,
+			"en_load": 245,
+			"price": 202000
+		},
+		{
+			"name": "Vvc-706PM",
+			"category": "plasma missile launcher",
+			"weight": 4800,
+			"en_load": 342,
+			"price": 310000
+		},
+		{
+			"name": "Vvc-70VPM",
+			"category": "plasma missile launcher",
+			"weight": 3760,
+			"en_load": 268,
+			"price": 96000
+		},
+		{
+			"name": "IB-C03W3: NGI 006",
+			"category": "coral missile launcher",
+			"weight": 4200,
+			"en_load": 783,
+			"price": 380000
+		},
+		{
+			"name": "BO-044 HUXLEY",
+			"category": "bullet orbit",
+			"weight": 2230,
+			"en_load": 425,
+			"price": 305000
+		},
+		{
+			"name": "45-091 ORBT",
+			"category": "laser orbit",
+			"weight": 2010,
+			"en_load": 446,
+			"price": 280000
+		},
+		{
+			"name": "VP-60LT",
+			"category": "laser turret",
+			"weight": 2800,
+			"en_load": 560,
+			"price": 194000
+		},
+		{
+			"name": "Vvc-700LD",
+			"category": "laser drone",
+			"weight": 3800,
+			"en_load": 570,
+			"price": 247000
 		}
 	],
 	"expansions": [
+	
 		{
 			"name": "(NOT EQUIPPED)",
+			"category": "n/a",
 			"weight": 0,
 			"en_load": 0,
 			"price": 0
 		},
+	
 		{
 			"name": "ASSAULT ARMOR",
 			"weight": 0,
