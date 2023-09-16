@@ -172,7 +172,9 @@
 	<div class="options">
 		<h2>Options</h2>
 		<div>
-			<input type="checkbox" id="toggle-randomize_weapon" autocomplete="off" /> <label for="toggle-randomize_weapon">武装をランダムに選択</label><br />
+			<input type="checkbox"  id="toggle-randomize_weapon" checked=”” autocomplete="off" /> <label for="toggle-randomize_weapon">武装をランダムに選択</label><br />
+			<input type="checkbox"  id="toggle-include_arm_weapons" checked=”” autocomplete="off" /> <label for="toggle-randomize_weapon">肩武器に腕武器を含める</label><br />
+			<input type="checkbox"  id="toggle-exclude_notequiped" checked=”” autocomplete="off" /> <label for="toggle-exclude_notequiped">非装備状態を除外</label><br />
 			<input type="checkbox" id="toggle-price-option" autocomplete="off" /> <label for="toggle-price-option">最大金額を指定</label> <input type="range" id="price-option" value="1000000" step="50000" min="0" max="5000000" autocomplete="off" disabled /> <label for="price-option" id="price-value"></label><br />
 			<input type="checkbox" id="toggle-overweight" autocomplete="off" /> <label for="toggle-overweight">積載容量を無視</label> 
 		</div>
@@ -182,7 +184,8 @@
 		<h2>Changelog</h2>
 		<div>
 		<ol>
-			<li>2023/09/15 -- 各パーツを再抽選できる機能の追加</li>
+			<li>2023/09/16 -- 非装備状態を除外する項目/肩武器に腕武器を含める項目を追加</li>
+			<li>2023/09/15 -- Reroll機能の追加/レイアウトの調整</li>
 			<li>2023/09/14 -- 日本語化/各武装をランダムで出力する機能を追加/レイアウトの調整</li>
 			<li>2023/09/06 -- 積載容量を無視するオプションを追加</li>
 			<li>2023/09/05 -- タンクの場合にブースターを装備しないように変更/COAMに関するオプションを追加/レイアウトの調整</li>
