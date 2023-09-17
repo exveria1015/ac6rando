@@ -628,7 +628,16 @@
 			"weight": 1930,
 			"en_load": 342,
 			"price": 323000
+		},
+		
+		{
+			"name": "(N/A)",
+			"category": "n/a",
+			"weight": 0,
+			"en_load": 0,
+			"price": 0
 		}
+
 	],
 	"fcs":
 	[
@@ -2154,6 +2163,15 @@
 		},
 		{
 			"name": "TERMINAL ARMOR",
+			"weight": 0,
+			"en_load": 0,
+			"price": 0
+		}
+	],
+	"none":[
+		{
+			"name": "(N/A)",
+			"category": "n/a",
 			"weight": 0,
 			"en_load": 0,
 			"price": 0
