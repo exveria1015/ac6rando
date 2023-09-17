@@ -74,6 +74,17 @@
 			width: 10em;
 			height:3em;
 		  }
+
+		  select {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin: auto;
+			text-align: center;
+			font-size: 1.4em;
+			font-weight: bold;
+			font-family: 'Rubik', sans-serif;
+		}
 		
 	</style>
 </head>
@@ -85,78 +96,79 @@
 			<input type="checkbox" id="head-checkbox">
 			<label for="head-checkbox">
 				<div class="part-category">HEAD</div>
-				<div class="part-name" id="head-name">...</div>
-			</label>
+				<select id="head-select" data-parts="head"></select>
 		</div>
+		
 		<div class="part">
 			<input type="checkbox" id="core-checkbox">
 			<label for="core-checkbox">
 			<div class="part-category">CORE</div>
-			<div class="part-name" id="core-name">...</div>
+			<select id="core-select"  data-parts="core"></select>
 		</div>
+
 		<div class="part">
 			<input type="checkbox" id="arms-checkbox">
 			<label for="arms-checkbox">
 			<div class="part-category">ARMS</div>
-			<div class="part-name" id="arms-name">...</div>
+			<select id="arms-select" data-parts="arms"></select>
 		</div>
 		<div class="part">
 			<input type="checkbox" id="legs-checkbox">
 			<label for="legs-checkbox">
 			<div class="part-category">LEGS</div>
-			<div class="part-name" id="legs-name">...</div>
+			<select id="legs-select"  data-parts="legs"></select>
 		</div>
 		<div class="part">
 			<input type="checkbox" id="booster-checkbox">
 			<label for="booster-checkbox">
 			<div class="part-category">BOOSTER</div>
-			<div class="part-name" id="booster-name">...</div>
+			<select id="booster-select" data-parts="booster"></select>
 		</div>
 		<div class="part">
 			<input type="checkbox" id="fcs-checkbox">
 			<label for="fcs-checkbox">
 			<div class="part-category">FCS</div>
-			<div class="part-name" id="fcs-name">...</div>
+			<select id="fcs-select"  data-parts="fcs"></select>
 		</div>
 		<div class="part">
 			<input type="checkbox" id="generator-checkbox">
 			<label for="generator-checkbox">
 			<div class="part-category">GENERATOR</div>
-			<div class="part-name" id="generator-name">...</div>
+			<select id="generator-select"  data-parts="generator"></select>
 		</div>
 		<div class="part">
 			<input type="checkbox" id="expansion-checkbox">
 			<label for="expansion-checkbox">
 			<div class="part-category">EXPANSION</div>
-			<div class="part-name" id="expansion-name">...</div>
+			<select id="expansion-select"  data-parts="expansion"></select>
 		</div>
 		<div class="part">
 			<input type="checkbox" id="right_arm_unit-checkbox">
 			<label for="right_arm_unit-checkbox">
 			<div class="part-category">RIGHT ARM UNITS</div>
 			<div class="weapon-category" id="right_arm_unit-category">...</div>
-			<div class="part-name" id="right_arm_unit-name">...</div>
+			<select id="right_arm_unit-select" data-parts="right_arm_unit"></select>
 		</div>
 		<div class="part">
 			<input type="checkbox" id="left_arm_unit-checkbox">
 			<label for="left_arm_unit-checkbox">
 			<div class="part-category">LEFT ARM UNITS</div>
 			<div class="weapon-category" id="left_arm_unit-category">...</div>
-			<div class="part-name" id="left_arm_unit-name">...</div>
+			<select id="left_arm_unit-select" data-parts="left_arm_unit"></select>
 		</div>
 		<div class="part">
 			<input type="checkbox" id="right_back_unit-checkbox">
 			<label for="right_back_unit-checkbox">
 			<div class="part-category">RIGHT BACK UNITS</div>
 			<div class="weapon-category" id="right_back_unit-category">...</div>
-			<div class="part-name" id="right_back_unit-name">...</div>
+			<select id="right_back_unit-select" data-parts="right_back_unit"></select>
 		</div>
 		<div class="part">
 			<input type="checkbox" id="left_back_unit-checkbox">
 			<label for="left_back_unit-checkbox">
 			<div class="part-category">LEFT BACK UNITS</div>
 			<div class="weapon-category" id="left_back_unit-category">...</div>
-			<div class="part-name" id="left_back_unit-name">...</div>
+			<select id="left_back_unit-select" data-parts="left_back_unit"></select>
 		</div>
 	</div>
 	<ul>
@@ -164,10 +176,15 @@
 		<li><b>EN容量:</b> <span id="energy-info">...</span></li>
 		<li><b>COAM:</b> <span id="price-info">...</span></li>
 	</ul>
-	<button id="fullbuild">Generate</button>
-	<button id="reroll">Reroll</button>
-	<li>Generateボタンで生成できます。</li>
-	<li>Rerollボタンはチェックした項目を振り直します。</li>
+	<ul>
+		<div id="en-error-message" style="color: red;"></div>
+		<div id="weight-error-message" style="color: red;"></div>
+		<div id="coam-error-message" style="color: red;"></div>
+	</ul>
+	<button id="fullbuild">アセンブル</button>
+	<button id="reroll">リロール</button>
+	<li>アセンブルボタンで生成できます。</li>
+	<li>リロールボタンはチェックした項目を再度アセンブルします。</li>
 	</p>
 	<div class="options">
 		<h2>Options</h2>
@@ -175,7 +192,7 @@
 			<input type="checkbox"  id="toggle-randomize_weapon" checked=”” autocomplete="off" /> <label for="toggle-randomize_weapon">武装をランダムに選択</label><br />
 			<input type="checkbox"  id="toggle-include_arm_weapons" checked=”” autocomplete="off" /> <label for="toggle-randomize_weapon">肩武器に腕武器を含める</label><br />
 			<input type="checkbox"  id="toggle-exclude_notequiped" checked=”” autocomplete="off" /> <label for="toggle-exclude_notequiped">非装備状態を除外</label><br />
-			<input type="checkbox" id="toggle-price-option" autocomplete="off" /> <label for="toggle-price-option">最大金額を指定</label> <input type="range" id="price-option" value="1000000" step="50000" min="0" max="5000000" autocomplete="off" disabled /> <label for="price-option" id="price-value"></label><br />
+			<input type="checkbox" id="toggle-price-option" autocomplete="off" /> <label for="toggle-price-option">最大COAMを指定</label> <input type="range" id="price-option" value="1000000" step="50000" min="0" max="5000000" autocomplete="off" disabled /> <label for="price-option" id="price-value"></label><br />
 			<input type="checkbox" id="toggle-overweight" autocomplete="off" /> <label for="toggle-overweight">積載容量を無視</label> 
 		</div>
 	</div>
