@@ -56,7 +56,7 @@ function generateFullRandomBuild() {
 
 	} else{
 		new_build.booster = filtered_boosters.random();
-		boosterSelect.enabled = false
+		boosterSelect.disabled = false
 	}
 
     if (exclude_notequiped) {
