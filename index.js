@@ -4,7 +4,9 @@ Array.prototype.random = function () {
 
 let parts_data = {};
 let total_weight = 0;
+let arms_unit_weight = 0;
 let load_limit = 0;
+let arms_limit = 0;
 let total_en_load = 0;
 let en_limit = 0;
 let total_price = 0;
@@ -228,6 +230,15 @@ function isBuildValid(build) {
         }
     });
 
+	let arms_limit = build.arms.arms_limit;
+	let arm_unit_weight = build.right_arm_unit.weight + build.left_arm_unit.weight;
+
+	if(!should_allow_overweight && arm_unit_weight > arms_limit ){
+		const armWeightError = "腕部積載超過";
+        document.getElementById("arms-error-message").textContent = armWeightError;
+        return false;
+	}
+
     if (!should_allow_overweight && weight > build.legs.load_limit) {
 		const weightError = "積載超過";
         document.getElementById("weight-error-message").textContent = weightError;
@@ -248,12 +259,16 @@ function isBuildValid(build) {
     }
 
 	document.getElementById("weight-error-message").textContent = "";
+	document.getElementById("arms-error-message").textContent = "";
 	document.getElementById("en-error-message").textContent = "";
 	document.getElementById("coam-error-message").textContent = "";
 
 
+
 	total_weight = weight;
     load_limit = build.legs.load_limit;
+	arms_limit = build.arms.arms_limit;
+	arms_unit_weight = build.right_arm_unit.weight + build.left_arm_unit.weight;
     total_en_load = total_en;
     en_limit = adjusted_en_output;
     total_price = price;
@@ -313,10 +328,14 @@ function isBuildValid(build) {
 	isBuildValid(build)	
 
 	let weight_pct = (total_weight / load_limit) * 100;
+	let arms_limit = build.arms.arms_limit;
+	let arms_limit_pct = (arms_unit_weight / arms_limit) *100;
 	weight_pct = Math.round(weight_pct * 100) / 100;
+	arms_limit_pct = Math.round(arms_limit_pct * 100) / 100;
 	let energy_pct = (total_en_load / en_limit) * 100;
 	energy_pct = Math.round(energy_pct * 100) / 100;
 	document.querySelector("#weight-info").innerHTML = total_weight + " / " + load_limit + " (" + weight_pct + "%)"
+	document.querySelector("#arms_weight-info").innerHTML = arms_unit_weight + " / " + arms_limit + " (" + arms_limit_pct + "%)"
 	document.querySelector("#energy-info").innerHTML = total_en_load + " / " + Math.round(en_limit) + " (" + energy_pct + "%)"
 	document.querySelector("#price-info").innerHTML = total_price.toLocaleString("en-US");
   }
@@ -475,13 +494,16 @@ ready(function() {
 		document.querySelector("#left_back_unit-category").innerHTML = build.left_back_unit.category;
 		}
 		let weight_pct = (total_weight / load_limit) * 100;
+		let arms_limit = build.arms.arms_limit;
+		let arms_limit_pct = (arms_unit_weight / arms_limit) *100;
 		weight_pct = Math.round(weight_pct * 100) / 100;
+		arms_limit_pct = Math.round(arms_limit_pct * 100) / 100;
 		let energy_pct = (total_en_load / en_limit) * 100;
 		energy_pct = Math.round(energy_pct * 100) / 100;
 		document.querySelector("#weight-info").innerHTML = total_weight + " / " + load_limit + " (" + weight_pct + "%)"
+		document.querySelector("#arms_weight-info").innerHTML = arms_unit_weight + " / " + arms_limit + " (" + arms_limit_pct + "%)"
 		document.querySelector("#energy-info").innerHTML = total_en_load + " / " + Math.round(en_limit) + " (" + energy_pct + "%)"
 		document.querySelector("#price-info").innerHTML = total_price.toLocaleString("en-US");
-		
 	});
 
 	reroll_btn.addEventListener("click", function() {
@@ -525,10 +547,14 @@ ready(function() {
 	}
 		
 		let weight_pct = (total_weight / load_limit) * 100;
+		let arms_limit = build.arms.arms_limit;
+		let arms_limit_pct = (arms_unit_weight / arms_limit) *100;
 		weight_pct = Math.round(weight_pct * 100) / 100;
+		arms_limit_pct = Math.round(arms_limit_pct * 100) / 100;
 		let energy_pct = (total_en_load / en_limit) * 100;
 		energy_pct = Math.round(energy_pct * 100) / 100;
 		document.querySelector("#weight-info").innerHTML = total_weight + " / " + load_limit + " (" + weight_pct + "%)"
+		document.querySelector("#arms_weight-info").innerHTML = arms_unit_weight + " / " + arms_limit + " (" + arms_limit_pct + "%)"
 		document.querySelector("#energy-info").innerHTML = total_en_load + " / " + Math.round(en_limit) + " (" + energy_pct + "%)"
 		document.querySelector("#price-info").innerHTML = total_price.toLocaleString("en-US");
 	});
