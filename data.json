@@ -255,109 +255,127 @@
 			"name": "AA-J-123 BASHO",
 			"weight": 10480,
 			"en_load": 210,
-			"price": 81000
+			"price": 81000,
+			"arms_limit": 10520
 		},
 		{
 			"name": "AA-J-123/RC JAILBREAK",
 			"weight": 8480,
 			"en_load": 210,
-			"price": 0
+			"price": 0,
+			"arms_limit": 10520
 		},
 		{
 			"name": "AR-011 MELANDER",
 			"weight": 13650,
 			"en_load": 265,
-			"price": 95000
+			"price": 95000,
+			"arms_limit": 15100
 		},
 		{
 			"name": "AR-012 MELANDER C3",
 			"weight": 12300,
 			"en_load": 232,
-			"price": 0
+			"price": 0,
+			"arms_limit": 12000
 		},
 		{
 			"name": "DF-AR-08 TIAN-QIANG",
 			"weight": 20020,
 			"en_load": 295,
-			"price": 200000
+			"price": 200000,
+			"arms_limit": 19500
 		},
 		{
 			"name": "DF-AR-09 TIAN-LAO",
 			"weight": 26740,
 			"en_load": 266,
-			"price": 310000
+			"price": 310000,
+			"arms_limit": 17200
 		},
 		{
 			"name": "VP-46S",
 			"weight": 14020,
 			"en_load": 278,
-			"price": 177000
+			"price": 177000,
+			"arms_limit": 14520
 		},
 		{
 			"name": "VP-46D",
 			"weight": 10990,
 			"en_load": 248,
-			"price": 258000
+			"price": 258000,
+			"arms_limit": 11800
 		},
 		{
 			"name": "NACHTREIHER/46E",
 			"weight": 11420,
 			"en_load": 302,
-			"price": 138000
+			"price": 138000,
+			"arms_limit":12730
 		},
 		{
 			"name": "VE-46A",
 			"weight": 22210,
 			"en_load": 380,
-			"price": 286000
+			"price": 286000,
+			"arms_limit": 21300
 		},
 		{
 			"name": "AC-2000 TOOL ARM",
 			"weight": 11300,
 			"en_load": 216,
-			"price": 0
+			"price": 0,
+			"arms_limit": 13300
 		},
 		{
 			"name": "AC-3000 WRECKER",
 			"weight": 14650,
 			"en_load": 220,
-			"price": 79000
+			"price": 79000,
+			"arms_limit": 15800
 		},
 		{
 			"name": "AS-5000 SALAD",
 			"weight": 20940,
 			"en_load": 356,
-			"price": 249000
+			"price": 249000,
+			"arms_limit": 18700
 		},
 		{
 			"name": "EL-TA-10 FIRMEZA",
 			"weight": 11220,
 			"en_load": 270,
-			"price": 227000
+			"price": 227000,
+			"arms_limit":13540
 		},
 		{
 			"name": "EL-PA-00 ALBA",
 			"weight": 9810,
 			"en_load": 315,
-			"price": 266000
+			"price": 266000,
+			"arms_limit": 11350
 		},
 		{
 			"name": "04-101 MIND ALPHA",
 			"weight": 16960,
 			"en_load": 358,
-			"price": 272000
+			"price": 272000,
+			"arms_limit":15550
 		},
 		{
 			"name": "IA-C01A EPHEMERA",
 			"weight": 12700,
 			"en_load": 312,
-			"price": 296000
+			"price": 296000,
+			"arms_limit":12680
 		},
 		{
 			"name": "IB-C03A HAL 826",
 			"weight": 14160,
 			"en_load": 300,
-			"price": 322000
+			"price": 322000,
+			"arms_limit":14000
 		}
 	],
 	"legs":
@@ -629,7 +647,7 @@
 			"en_load": 342,
 			"price": 323000
 		},
-		
+
 		{
 			"name": "(N/A)",
 			"category": "n/a",
