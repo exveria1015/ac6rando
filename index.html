@@ -8,85 +8,123 @@
 	<meta charset="UTF-8">
 	<title>AC6 Build Randomizer</title>
 	<style>
+	body {
+	max-width: 960px;
+	margin: 0 auto;
+	}
+
+	.part {
+	border: 1px solid #AAA;
+	margin: 1em;
+	padding: 1em;
+	font-family: 'Rubik', sans-serif;
+	}
+
+	.part-category {
+	color: #454545;
+	font-size: 0.8em;
+	font-family: 'Rubik', sans-serif;
+	}
+
+	.part-name {
+	text-align: center;
+	font-size: 1.4em;
+	font-weight: bold;
+	font-family: 'Rubik', sans-serif;
+	}
+
+	.weapon-category{
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	text-transform: uppercase;
+	font-family: 'Rubik', sans-serif;
+	}
+
+
+	ol {
+	list-style: disc;
+	}
+
+	.options {
+	border: 1px solid #AAA;
+	background-color: #EEE;
+	padding: 2em;
+	font-family: 'Kosugi', sans-serif;
+	}
+
+	.options h2 {
+	margin-top: 0;
+	font-family: 'Rubik', sans-serif;
+	}
+
+	.changelog h2 {
+	margin-top: 0;
+	font-family: 'Rubik', sans-serif;
+	}
+
+	.build {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	font-family: 'Rubik', sans-serif;
+	}
+
+	button {
+	width: 10em;
+	height: 3em;
+	}
+
+	select {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: auto;
+	text-align: center;
+	font-size: 1.4em;
+	font-weight: bold;
+	font-family: 'Rubik', sans-serif;
+	}
+
+	@media screen and (max-width: 980px) {
 		body {
-			max-width: 960px;
-			margin: 0 auto;
-
+			max-width: 100%;
 		}
+
 		.part {
-			border: 1px solid #AAA;
-			margin: 1em;
-			padding: 1em;
-			font-family: 'Rubik', sans-serif;
+			justify-content: center;
+			margin: 0.5em;
+			padding: 0.5em;
+			width: 95%;
 		}
-		.part-category {
-			color: #454545;
-			font-size: 0.8em;
-			font-family: 'Rubik', sans-serif;
-		}
-		.part-name {
-			text-align: center;
-			font-size: 1.4em;
-			font-weight: bold;
-			font-family: 'Rubik', sans-serif;
-		}
-
-		.weapon-category{
-			font-size: 1em;
-			font-weight: bold;
-			text-align: left;
-			text-transform: uppercase;
-			font-family: 'Rubik', sans-serif;
-		}
-
-
-		ol {
-			list-style: disc;
-
-		}
-
-		.options {
-			border: 1px solid #AAA;
-			background-color: #EEE;
-			padding: 2em;
-			font-family: 'Kosugi', sans-serif;
-
-			
-		}
-		.options h2 {
-			margin-top: 0;
-			font-family: 'Rubik', sans-serif;
-		}
-
-		.changelog h2 {
-			margin-top: 0;
-			font-family: 'Rubik', sans-serif;		}
 
 		.build {
-			width: 100%;
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			font-family: 'Rubik', sans-serif;
-
+			grid-template-columns: 1fr;
+			zoom:2;
 		}
 
-		button {
-			width: 10em;
-			height:3em;
-		  }
+		button, select {
+			width: 100%;
+		}
 
-		  select {
-			display: flex;
+		button{
+			margin: 0.5em;
+			padding: 0.5em;
+			zoom:3
+		}
+
+		.options{
 			justify-content: center;
 			flex-wrap: wrap;
-			margin: auto;
-			text-align: center;
-			font-size: 1.4em;
-			font-weight: bold;
-			font-family: 'Rubik', sans-serif;
+			width:90%;
+			padding: 0.5em;
+			margin: 0.5em;
+			font-size: 1.2em;
+			zoom:2;
 		}
-		
-	</style>
+	}
+</style>
+
 </head>
 <body>
 	<h1>Armored Core 6 Build Randomizer</h1>
