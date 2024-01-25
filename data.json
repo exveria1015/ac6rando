@@ -901,6 +901,13 @@
 			"price": 120000
 		},
 		{
+			"name": "WR-0555 ATTACHE",
+			"category": "heavy machine gun",
+			"weight": 5110,
+			"en_load": 303,
+			"price": 169000
+		},
+		{
 			"name": "MA-E-210 ETSUJIN",
 			"category": "burst machine gun",
 			"weight": 2810,
@@ -1158,6 +1165,13 @@
 			"weight": 4600,
 			"en_load": 165,
 			"price": 168000
+		},
+		{
+			"name": "PFAU/66D",
+			"category": "pulse hand launcher",
+			"weight": 3630,
+			"en_load": 392,
+			"price": 210000
 		}
 	],
 	"left_arm_units":
@@ -1318,6 +1332,13 @@
 			"price": 120000
 		},
 		{
+			"name": "WR-0555 ATTACHE",
+			"category": "heavy machine gun",
+			"weight": 5110,
+			"en_load": 303,
+			"price": 169000
+		},
+		{
 			"name": "MA-E-210 ETSUJIN",
 			"category": "burst machine gun",
 			"weight": 2810,
@@ -1575,6 +1596,13 @@
 			"weight": 4600,
 			"en_load": 165,
 			"price": 168000
+		},
+		{
+			"name": "PFAU/66D",
+			"category": "pulse hand launcher",
+			"weight": 3630,
+			"en_load": 392,
+			"price": 210000
 		}
 	],
 	"right_back_units":
