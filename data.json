@@ -1615,9 +1615,16 @@
 			"price": 0
 		},
 		{
+			"name": "DF-GA-09 SHAO-WEI",
+			"category": "gatling cannon",
+			"weight": 3960,
+			"en_load": 404,
+			"price": 220000
+		},
+		{
 			"name": "SB-033M MORLEY",
 			"category": "spread bazooka",
-			"weight": 8480,
+			"weight": 6580,
 			"en_load": 465,
 			"price": 255000
 		},
@@ -1657,6 +1664,13 @@
 			"price": 333000
 		},
 		{
+			"name": "VE-60LCB",
+			"category": "laser cannon",
+			"weight": 9270,
+			"en_load": 803,
+			"price": 318000
+		},
+		{
 			"name": "VP-60LCD",
 			"category": "diffuse laser cannon",
 			"weight": 7620,
@@ -1680,15 +1694,15 @@
 		{
 			"name": "EULE/60D",
 			"category": "pulse shield launcher",
-			"weight": 3060,
-			"en_load": 620,
+			"weight": 2760,
+			"en_load": 382,
 			"price": 243000
 		},
 		{
 			"name": "IA-C01W3: AURORA",
 			"category": "light wave cannon",
 			"weight": 3330,
-			"en_load": 522,
+			"en_load": 390,
 			"price": 340000
 		},
 		{
@@ -1827,15 +1841,15 @@
 		{
 			"name": "Vvc-703PM",
 			"category": "plasma missile launcher",
-			"weight": 2720,
-			"en_load": 245,
+			"weight": 2310,
+			"en_load": 210,
 			"price": 202000
 		},
 		{
 			"name": "Vvc-706PM",
 			"category": "plasma missile launcher",
-			"weight": 4800,
-			"en_load": 342,
+			"weight": 3900,
+			"en_load": 276,
 			"price": 310000
 		},
 		{
@@ -1856,7 +1870,7 @@
 			"name": "BO-044 HUXLEY",
 			"category": "bullet orbit",
 			"weight": 2230,
-			"en_load": 425,
+			"en_load": 435,
 			"price": 305000
 		},
 		{
@@ -1939,11 +1953,17 @@
 			"en_load": 800,
 			"price": 255000
 		},
-		
+		{
+			"name": "DF-GA-09 SHAO-WEI",
+			"category": "gatling cannon",
+			"weight": 3960,
+			"en_load": 404,
+			"price": 220000
+		},
 		{
 			"name": "SB-033M MORLEY",
 			"category": "spread bazooka",
-			"weight": 8480,
+			"weight": 6580,
 			"en_load": 465,
 			"price": 255000
 		},
@@ -1983,6 +2003,13 @@
 			"price": 333000
 		},
 		{
+			"name": "VE-60LCB",
+			"category": "laser cannon",
+			"weight": 9270,
+			"en_load": 803,
+			"price": 318000
+		},
+		{
 			"name": "VP-60LCD",
 			"category": "diffuse laser cannon",
 			"weight": 7620,
@@ -2006,15 +2033,15 @@
 		{
 			"name": "EULE/60D",
 			"category": "pulse shield launcher",
-			"weight": 3060,
-			"en_load": 620,
+			"weight": 2760,
+			"en_load": 382,
 			"price": 243000
 		},
 		{
 			"name": "IA-C01W3: AURORA",
 			"category": "light wave cannon",
 			"weight": 3330,
-			"en_load": 522,
+			"en_load": 390,
 			"price": 340000
 		},
 		{
@@ -2153,15 +2180,15 @@
 		{
 			"name": "Vvc-703PM",
 			"category": "plasma missile launcher",
-			"weight": 2720,
-			"en_load": 245,
+			"weight": 2310,
+			"en_load": 210,
 			"price": 202000
 		},
 		{
 			"name": "Vvc-706PM",
 			"category": "plasma missile launcher",
-			"weight": 4800,
-			"en_load": 342,
+			"weight": 3900,
+			"en_load": 276,
 			"price": 310000
 		},
 		{
@@ -2182,7 +2209,7 @@
 			"name": "BO-044 HUXLEY",
 			"category": "bullet orbit",
 			"weight": 2230,
-			"en_load": 425,
+			"en_load": 435,
 			"price": 305000
 		},
 		{
