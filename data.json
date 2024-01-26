@@ -62,6 +62,12 @@
 			"price": 210000
 		},
 		{
+			"name": "LAMMERGEIER/44F",
+			"weight": 1050,
+			"en_load": 220,
+			"price": 155000
+		},
+		{
 			"name": "VE-44A",
 			"weight": 3640,
 			"en_load": 182,
@@ -182,8 +188,15 @@
 			"name": "NACHTREIHER/40E",
 			"weight": 9820,
 			"en_load": 330,
-			"output_adj": 84,
+			"output_adj": 91,
 			"price": 275000
+		},
+		{
+			"name": "LAMMERGEIER/40F",
+			"weight": 9700,
+			"en_load": 341,
+			"output_adj": 117,
+			"price": 395000
 		},
 		{
 			"name": "VE-40A",
@@ -274,7 +287,7 @@
 		},
 		{
 			"name": "AR-012 MELANDER C3",
-			"weight": 12300,
+			"weight": 12000,
 			"en_load": 232,
 			"price": 0,
 			"arms_limit": 12000
@@ -310,9 +323,16 @@
 		{
 			"name": "NACHTREIHER/46E",
 			"weight": 11420,
-			"en_load": 302,
+			"en_load": 290,
 			"price": 138000,
 			"arms_limit":12730
+		},
+		{
+			"name": "LAMMERGEIER/46F",
+			"weight": 9700,
+			"en_load": 328,
+			"price": 195000,
+			"arms_limit":11970
 		},
 		{
 			"name": "VE-46A",
@@ -330,7 +350,7 @@
 		},
 		{
 			"name": "AC-3000 WRECKER",
-			"weight": 14650,
+			"weight": 14150,
 			"en_load": 220,
 			"price": 79000,
 			"arms_limit": 15800
@@ -338,7 +358,7 @@
 		{
 			"name": "AS-5000 SALAD",
 			"weight": 20940,
-			"en_load": 356,
+			"en_load": 324,
 			"price": 249000,
 			"arms_limit": 18700
 		},
@@ -447,7 +467,7 @@
 		{
 			"name": "2C-2000 CRAWLER",
 			"weight": 16300,
-			"load_limit": 51200,
+			"load_limit": 53700,
 			"en_load": 280,
 			"is_tank": false,
 			"price": 0
@@ -486,9 +506,9 @@
 		},
 		{
 			"name": "06-041 MIND ALPHA",
-			"weight": 22110,
+			"weight": 21110,
 			"load_limit": 63810,
-			"en_load": 432,
+			"en_load": 412,
 			"is_tank": false,
 			"price": 482000
 		},
@@ -510,7 +530,7 @@
 		},
 		{
 			"name": "KASUAR/42Z",
-			"weight": 19060,
+			"weight": 17560,
 			"load_limit": 47820,
 			"en_load": 388,
 			"is_tank": false,
@@ -518,7 +538,7 @@
 		},
 		{
 			"name": "06-042 MIND BETA",
-			"weight": 22000,
+			"weight": 21000,
 			"load_limit": 61600,
 			"en_load": 426,
 			"is_tank": false,
@@ -527,7 +547,7 @@
 		{
 			"name": "RC-2000 SPRING CHICKEN",
 			"weight": 25890,
-			"load_limit": 68360,
+			"load_limit": 70360,
 			"en_load": 402,
 			"is_tank": false,
 			"price": 419000
@@ -549,6 +569,14 @@
 			"price": 313000
 		},
 		{
+			"name": "LAMMERGEIER/42F",
+			"weight": 22430,
+			"load_limit": 52460,
+			"en_load": 790,
+			"is_tank": false,
+			"price": 415000
+		},
+		{
 			"name": "LG-022T BORNEMISSZA",
 			"weight": 49800,
 			"load_limit": 100300,
@@ -558,7 +586,7 @@
 		},
 		{
 			"name": "VE-42B",
-			"weight": 36600,
+			"weight": 46600,
 			"load_limit": 91000,
 			"en_load": 824,
 			"is_tank": true,
@@ -873,6 +901,13 @@
 			"price": 120000
 		},
 		{
+			"name": "WR-0555 ATTACHE",
+			"category": "heavy machine gun",
+			"weight": 5110,
+			"en_load": 303,
+			"price": 169000
+		},
+		{
 			"name": "MA-E-210 ETSUJIN",
 			"category": "burst machine gun",
 			"weight": 2810,
@@ -1130,6 +1165,13 @@
 			"weight": 4600,
 			"en_load": 165,
 			"price": 168000
+		},
+		{
+			"name": "PFAU/66D",
+			"category": "pulse hand launcher",
+			"weight": 3630,
+			"en_load": 392,
+			"price": 210000
 		}
 	],
 	"left_arm_units":
@@ -1180,8 +1222,8 @@
 		{
 			"name": "Vvc-770LB",
 			"category": "laser blade",
-			"weight": 2680,
-			"en_load": 365,
+			"weight": 2060,
+			"en_load": 245,
 			"price": 210000
 		},
 		{
@@ -1290,6 +1332,13 @@
 			"price": 120000
 		},
 		{
+			"name": "WR-0555 ATTACHE",
+			"category": "heavy machine gun",
+			"weight": 5110,
+			"en_load": 303,
+			"price": 169000
+		},
+		{
 			"name": "MA-E-210 ETSUJIN",
 			"category": "burst machine gun",
 			"weight": 2810,
@@ -1547,6 +1596,13 @@
 			"weight": 4600,
 			"en_load": 165,
 			"price": 168000
+		},
+		{
+			"name": "PFAU/66D",
+			"category": "pulse hand launcher",
+			"weight": 3630,
+			"en_load": 392,
+			"price": 210000
 		}
 	],
 	"right_back_units":
@@ -1559,9 +1615,16 @@
 			"price": 0
 		},
 		{
+			"name": "DF-GA-09 SHAO-WEI",
+			"category": "gatling cannon",
+			"weight": 3960,
+			"en_load": 404,
+			"price": 220000
+		},
+		{
 			"name": "SB-033M MORLEY",
 			"category": "spread bazooka",
-			"weight": 8480,
+			"weight": 6580,
 			"en_load": 465,
 			"price": 255000
 		},
@@ -1601,6 +1664,13 @@
 			"price": 333000
 		},
 		{
+			"name": "VE-60LCB",
+			"category": "laser cannon",
+			"weight": 9270,
+			"en_load": 803,
+			"price": 318000
+		},
+		{
 			"name": "VP-60LCD",
 			"category": "diffuse laser cannon",
 			"weight": 7620,
@@ -1624,15 +1694,15 @@
 		{
 			"name": "EULE/60D",
 			"category": "pulse shield launcher",
-			"weight": 3060,
-			"en_load": 620,
+			"weight": 2760,
+			"en_load": 382,
 			"price": 243000
 		},
 		{
 			"name": "IA-C01W3: AURORA",
 			"category": "light wave cannon",
 			"weight": 3330,
-			"en_load": 522,
+			"en_load": 390,
 			"price": 340000
 		},
 		{
@@ -1771,15 +1841,15 @@
 		{
 			"name": "Vvc-703PM",
 			"category": "plasma missile launcher",
-			"weight": 2720,
-			"en_load": 245,
+			"weight": 2310,
+			"en_load": 210,
 			"price": 202000
 		},
 		{
 			"name": "Vvc-706PM",
 			"category": "plasma missile launcher",
-			"weight": 4800,
-			"en_load": 342,
+			"weight": 3900,
+			"en_load": 276,
 			"price": 310000
 		},
 		{
@@ -1800,7 +1870,7 @@
 			"name": "BO-044 HUXLEY",
 			"category": "bullet orbit",
 			"weight": 2230,
-			"en_load": 425,
+			"en_load": 435,
 			"price": 305000
 		},
 		{
@@ -1883,11 +1953,17 @@
 			"en_load": 800,
 			"price": 255000
 		},
-		
+		{
+			"name": "DF-GA-09 SHAO-WEI",
+			"category": "gatling cannon",
+			"weight": 3960,
+			"en_load": 404,
+			"price": 220000
+		},
 		{
 			"name": "SB-033M MORLEY",
 			"category": "spread bazooka",
-			"weight": 8480,
+			"weight": 6580,
 			"en_load": 465,
 			"price": 255000
 		},
@@ -1927,6 +2003,13 @@
 			"price": 333000
 		},
 		{
+			"name": "VE-60LCB",
+			"category": "laser cannon",
+			"weight": 9270,
+			"en_load": 803,
+			"price": 318000
+		},
+		{
 			"name": "VP-60LCD",
 			"category": "diffuse laser cannon",
 			"weight": 7620,
@@ -1950,15 +2033,15 @@
 		{
 			"name": "EULE/60D",
 			"category": "pulse shield launcher",
-			"weight": 3060,
-			"en_load": 620,
+			"weight": 2760,
+			"en_load": 382,
 			"price": 243000
 		},
 		{
 			"name": "IA-C01W3: AURORA",
 			"category": "light wave cannon",
 			"weight": 3330,
-			"en_load": 522,
+			"en_load": 390,
 			"price": 340000
 		},
 		{
@@ -2097,15 +2180,15 @@
 		{
 			"name": "Vvc-703PM",
 			"category": "plasma missile launcher",
-			"weight": 2720,
-			"en_load": 245,
+			"weight": 2310,
+			"en_load": 210,
 			"price": 202000
 		},
 		{
 			"name": "Vvc-706PM",
 			"category": "plasma missile launcher",
-			"weight": 4800,
-			"en_load": 342,
+			"weight": 3900,
+			"en_load": 276,
 			"price": 310000
 		},
 		{
@@ -2126,7 +2209,7 @@
 			"name": "BO-044 HUXLEY",
 			"category": "bullet orbit",
 			"weight": 2230,
-			"en_load": 425,
+			"en_load": 435,
 			"price": 305000
 		},
 		{
